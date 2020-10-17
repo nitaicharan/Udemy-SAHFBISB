@@ -3,15 +3,15 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.luv2code</groupId>
-	<artifactId>spring-security-demo-user-registration</artifactId>
+	<artifactId>spring-security-demo-landing-page</artifactId>
 	<version>1.0</version>
 	<packaging>war</packaging>
 
-	<name>spring-security-demo-user-registration</name>
+	<name>spring-security-demo</name>
 
 	<properties>
-		<springframework.version>5.0.4.RELEASE</springframework.version>
-		<springsecurity.version>5.0.3.RELEASE</springsecurity.version>
+		<springframework.version>5.0.2.RELEASE</springframework.version>
+		<springsecurity.version>5.0.0.RELEASE</springsecurity.version>
 
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
@@ -48,20 +48,6 @@
 		    <version>${springsecurity.version}</version>
 		</dependency>	
 		
-		<!-- Add MySQL and C3P0 support -->
-
-		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<version>5.1.45</version>
-		</dependency>
-		
-		<dependency>
-			<groupId>com.mchange</groupId>
-			<artifactId>c3p0</artifactId>
-			<version>0.9.5.2</version>
-		</dependency>
-				
 		
 		<!-- Servlet, JSP and JSTL support -->
 		<dependency>
@@ -89,18 +75,12 @@
 			<scope>test</scope>
 		</dependency>
 
-		<!-- Hibernate Validator -->
-		<dependency>
-		    <groupId>org.hibernate</groupId>
-		    <artifactId>hibernate-validator</artifactId>
-		    <version>6.0.7.Final</version>
-		</dependency>
-
 	</dependencies>
 
+	<!-- TO DO: Add support for Maven WAR Plugin -->
 
 	<build>
-		<finalName>spring-security-demo-user-registration</finalName>
+		<finalName>spring-security-demo</finalName>
 	
 		<pluginManagement>
 			<plugins>

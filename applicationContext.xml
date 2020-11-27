@@ -8,6 +8,16 @@
     http://www.springframework.org/schema/context/spring-context.xsd">
 
 	
+	<!-- 
+		Add a logger config to see logging messages.		
+		- For more detailed logs, set values to "FINEST"
+		- For info on logging levels, see: http://www.vogella.com/tutorials/Logging/article.html
+	 -->
+    <bean id="myLoggerConfig" class="com.luv2code.springdemo.MyLoggerConfig" init-method="initLogger">
+    	<property name="rootLoggerLevel" value="FINE" />
+    	<property name="printedLoggerLevel" value="FINE"/>
+    </bean>
+	
     <!-- Define your beans here -->
     
     <!-- define the dependency -->
@@ -16,18 +26,10 @@
     	</bean>
     
  	<bean id="myCoach"
- 		class="com.luv2code.springdemo.TrackCoach">	 		
+ 		class="com.luv2code.springdemo.TrackCoach">	
+ 		
+ 		<!-- set up constructor injection -->
+ 		<constructor-arg ref="myFortuneService" />
  	</bean>
-
-    <!--
-    <bean id="myCoach"
-        class="com.luv2code.springdemo.BaseballCoach">         
-    </bean>
-    -->
-
+        
 </beans>
-
-
-
-
-

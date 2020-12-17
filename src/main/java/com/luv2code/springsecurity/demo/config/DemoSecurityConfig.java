@@ -29,13 +29,15 @@ public class DemoSecurityConfig extends WebSecurityConfigurerAdapter {
 	protected void configure(HttpSecurity http) throws Exception {
 
 		http.authorizeRequests()
-				.antMatchers("/css/**").permitAll()
 				.anyRequest().authenticated()
 			.and()
 			.formLogin()
 				.loginPage("/showMyLoginPage")
 				.loginProcessingUrl("/authenticateTheUser")
-				.permitAll();		
+				.permitAll()
+			.and()
+			.logout().permitAll();
+		
 	}
 		
 }

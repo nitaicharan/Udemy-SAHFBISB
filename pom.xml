@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.luv2code</groupId>
-	<artifactId>jackson-databind-json-demo-02-nested-objects-and-arrays</artifactId>
+	<artifactId>jackson-databind-json-demo-04-ignore-properties</artifactId>
 	<version>1.0.0</version>
 	<packaging>jar</packaging>
 
